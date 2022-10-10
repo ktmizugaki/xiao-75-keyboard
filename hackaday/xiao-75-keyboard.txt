@@ -1,0 +1,66 @@
+https://hackaday.io/project/187709
+
+# project's name (50 characters)
+xiao 75% keyboard
+
+# summarize your project (140 characters)
+Small compact tenkyless keyboard with pointing device.
+
+# describe your project (1000 characters)
+xiao 75% keyboard is compact tenkyless keyboard with pointing device.
+Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
+16mm pitch between keys, keyboard size is 249mm x 135mm.
+
+# Details
+<p>At time of writing this, Seeed studio is doing Seeed XIAO mechanical keyboard contest but it is completely irrelevant.</p>
+
+<p>Motivation of this keyboard is I want compact, small keyboard with dedicated PageUp/PageDown key. Most of small keyboards mapped Fn+Up/Down for PageUp/PageDown but I fed up pressing Fn key for PageUp and PageDown!! Pointing device is also quite handy when I want to click something while typing.</p>
+
+<ul>
+<li>86 Kailh mini choc switches for keyboard keys.</li>
+<li>2 Kailh X Switches for mouse buttons.</li>
+<li>1 Top-up JT8P analog stick for pointing device.</li>
+<li>Seeed XIAO as controller.</li>
+<li>LED under each keyboard keys.</li>
+</ul>
+
+<p>
+  XIAO has 11 IO pins. I used 10 IOs for key matrix and 1 IO for analog input to read X/Y of analog stick.<br>
+  By using charlieplexing technique, 10×9 switch matrix can be created. 2 cells of matrix are used to power analog stick.<br>
+  External slide switch tunrs on/off LEDs as there wasn't enough pins to controll LED.
+</p>
+
+<p>
+  I'll describe a bit how analog stick is sensed.<br>
+  The analog stick I used is simply pair of potentiometer. To read position, connect VCC to one end, connect GND to the other end, and read divided voltage using analog input.
+</p>
+<!-- analog-read-1.png -->
+<figure><img src="https://cdn.hackaday.io/images/7818181665382544900.png" data-image="1665382545232"></figure>
+<p>
+  Above circuit uses 2 analog inputs, but I have only 1 analog input. So connect 2 IOs to potentionmeters via diode like below image.
+</p>
+<!-- analog-read-2.png -->
+<figure><img src="https://cdn.hackaday.io/images/8272431665382560414.png" data-image="1665382560792"></figure>
+<p>
+  If D10=H and D9=L, A1 value is position of X. If D10=L and D10=H, A1 value is position of Y.
+</p>
+
+# Components
+86x Kailh PG1232 mini choc switch(keyboard switches)
+2x Kailh PG1425 X switch(mouse buttons)
+1x TOP-UP JT8P-3.2T-B10K-1-16Y(pointing device)
+1x Seeed XIAO(Seeed XIAO)
+88x 1N4148W(SOD-123 SMD switching diode)
+4x SS2040FL(SOD-123 SMD low Vf diode)
+10x 1608Metric 560ohm SMD resistor
+10x 1SS355VM(SOD-323 SMD switching diode)
+2x 7P pin socket
+2x 7P pin header
+1x Keyboard PCB
+
+86x 2012Metric SMD LED
+86x 2012Metric 2.2k ohm SMD resistor(needed only for LED. Adjust value depending on Vf of LED)
+1x NJM12888-33(needed only for LED. SOT23-5 Voltage Regulator with enable pin)
+2x 2012Metric 0.1uF SMD capacitor(needed only for LED)
+1x 2012Metric 1uF SMD capacitor(needed only for LED)
+1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
