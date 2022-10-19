@@ -64,3 +64,8 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 2x 2012Metric 0.1uF SMD capacitor(needed only for LED)
 1x 2012Metric 1uF SMD capacitor(needed only for LED)
 1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
+
+# Logs
+## I got a light
+<p>My board shines.</p>
+<div class="video-container"><iframe style="width: 500px; height: 281px;" src="//www.youtube.com/embed/Karp8nstRRc" allowfullscreen="" frameborder="0"></iframe></div>
