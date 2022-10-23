@@ -66,6 +66,13 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
 
 # Logs
+## Implemented switches
+<p>Switches bought from aliexpress arrived.</p>
+<figure><!-- key-switches.jpg --><img src="https://cdn.hackaday.io/images/8559381666491375774.jpg" data-image="1666491376456"></figure>
+<p>Implemented switches.</p>
+<figure><!-- xiao-75-keyboard-assembled.jpg --><img src="https://cdn.hackaday.io/images/9564481666491387657.jpg" data-image="1666491388420"></figure>
+<p>Quickly tested and all keys worked.</p>
+
 ## I got a light
 <p>My board shines.</p>
 <div class="video-container"><iframe style="width: 500px; height: 281px;" src="//www.youtube.com/embed/Karp8nstRRc" allowfullscreen="" frameborder="0"></iframe></div>
