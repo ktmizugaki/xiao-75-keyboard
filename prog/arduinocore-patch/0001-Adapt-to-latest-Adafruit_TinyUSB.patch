@@ -1,0 +1,75 @@
+From fda0189bfc8a340ed6d3c09c88caeb4319573ec0 Mon Sep 17 00:00:00 2001
+From: mizugaki <k.t.mizugaki@gmail.com>
+Date: Sat, 19 Feb 2022 22:15:35 +0900
+Subject: [PATCH] Adapt to latest Adafruit_TinyUSB
+
+---
+ cores/arduino/Arduino.h    | 2 +-
+ cores/arduino/hooks.c      | 8 ++++----
+ cores/arduino/main.cpp     | 3 +--
+ variants/XIAO_m0/variant.h | 2 +-
+ 4 files changed, 7 insertions(+), 8 deletions(-)
+
+diff --git a/cores/arduino/Arduino.h b/cores/arduino/Arduino.h
+index ca6ec0d..bcbe1b7 100644
+--- a/cores/arduino/Arduino.h
++++ b/cores/arduino/Arduino.h
+@@ -170,7 +170,7 @@ static inline unsigned char __interruptsStatus(void)
+ 
+ // USB
+ #ifdef USE_TINYUSB
+-#include "Adafruit_TinyUSB_Core.h"
++#include "arduino/Adafruit_USBD_CDC.h"
+ #else
+ #include "USB/USBDesc.h"
+ #include "USB/USBCore.h"
+diff --git a/cores/arduino/hooks.c b/cores/arduino/hooks.c
+index 88d6e39..7bb3ded 100644
+--- a/cores/arduino/hooks.c
++++ b/cores/arduino/hooks.c
+@@ -26,14 +26,14 @@
+  * Its defined as a weak symbol and it can be redefined to implement a
+  * real cooperative scheduler.
+  */
+-extern void tud_task(void);
+-extern uint32_t tud_cdc_n_write_flush (uint8_t itf);
++extern void TinyUSB_Device_Task(void);
++extern void TinyUSB_Device_FlushCDC(void);
+ static void __empty()
+ {
+ // Empty
+ #if defined(USE_TINYUSB)
+-  tud_task();
+-  tud_cdc_n_write_flush(0);
++  TinyUSB_Device_Task();
++  TinyUSB_Device_FlushCDC();
+ #endif
+ }
+ void yield(void) __attribute__((weak, alias("__empty")));
+diff --git a/cores/arduino/main.cpp b/cores/arduino/main.cpp
+index 15fc54e..808cd07 100644
+--- a/cores/arduino/main.cpp
++++ b/cores/arduino/main.cpp
+@@ -69,8 +69,7 @@ int main(void)
+   delay(1);
+ 
+ #if defined(USE_TINYUSB)
+-  Adafruit_TinyUSB_Core_init();
+-  tinyusb_task();
++  TinyUSB_Device_Init(0);
+ #elif defined(USBCON)
+   USBDevice.init();
+   USBDevice.attach();
+diff --git a/variants/XIAO_m0/variant.h b/variants/XIAO_m0/variant.h
+index 55aeabd..e19ca8f 100644
+--- a/variants/XIAO_m0/variant.h
++++ b/variants/XIAO_m0/variant.h
+@@ -198,4 +198,4 @@ extern Uart Serial1;
+ #define SERIAL_PORT_HARDWARE_OPEN   Serial1
+ 
+ // Alias Serial to SerialUSB
+-#define Serial                      SerialUSB
++#define SerialUSB                   Serial
+-- 
+2.30.2
+
