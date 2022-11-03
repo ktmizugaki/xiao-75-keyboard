@@ -12,8 +12,6 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 16mm pitch between keys, keyboard size is 249mm x 135mm.
 
 # Details
-<p>At time of writing this, Seeed studio is doing Seeed XIAO mechanical keyboard contest but it is completely irrelevant.</p>
-
 <p>Motivation of this keyboard is I want compact, small keyboard with dedicated PageUp/PageDown key. Most of small keyboards mapped Fn+Up/Down for PageUp/PageDown but I fed up pressing Fn key for PageUp and PageDown!! Pointing device is also quite handy when I want to click something while typing.</p>
 
 <ul>
@@ -66,6 +64,12 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
 
 # Logs
+## Completed firmware
+<p>I think I finished writing firmware.</p>
+<p>Since QMK dosen't support XIAO m0 (SAMD21), I wrote simple keyboard firmware on arduino and Adafruit TinyUsb.</p>
+<p>Code is available on github: https://github.com/ktmizugaki/xiao-75-keyboard/tree/main/prog/</p>
+<p>it may not be trivial to build the firmware as I am using unusual setup.</p>
+
 ## Implemented switches
 <p>Switches bought from aliexpress arrived.</p>
 <figure><!-- key-switches.jpg --><img src="https://cdn.hackaday.io/images/8559381666491375774.jpg" data-image="1666491376456"></figure>
