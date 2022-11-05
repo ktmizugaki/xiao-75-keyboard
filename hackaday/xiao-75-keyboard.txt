@@ -64,6 +64,16 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
 
 # Logs
+## Create keycap
+<p>My keyboard's pitch of key switch is 16mm by 16mm. This means there isn't producted keycap for my keyboard. Natural option recently is 3D print the keycaps.</p>
+<p>There is some people published keycaps for low pitch keyboards at marketplace on https://make.dmm.com/, well-known 3D print service in Japan. e.g. <a href="https://make.dmm.com/item/1280629/">YKNキーキャップセット(Chocスイッチ 15x15mmキーピッチ用)</a> or <a href="https://make.dmm.com/item/1273303/">Choc 向け 挟ピッチ16mm 薄型キーキャップ（50個）</a>.</p>
+<p>I liked YKNキーキャップ but it doesn't contain enough keycaps for my keyboard. I also wanted to keycap same size as kailh mini choc keyswitch, 14.5mm×13.5mm. So I tried to create keycaps using FreeCAD.</p>
+<p>My first attempt is applying chamfer to box on FreeCAD but it was boring.</p>
+<figure><!-- keycap-first.png --><img src="https://cdn.hackaday.io/images/983581667646842369.png" data-image="1667646842795" width="400" height="300"></figure>
+<p>I tried Loft tool found while searching for a way to create better model against sketches I draw roughly and it unexpectedly worked well.</p>
+<figure><!-- keycap-second-sketch.png --><img src="https://cdn.hackaday.io/images/1335231667646877115.png" data-image="1667646877531" width="400" height="300"></figure>
+<figure><!-- keycap-second.png --><img src="https://cdn.hackaday.io/images/8844491667646862550.png" data-image="1667646862985" width="400" height="300"></figure>
+
 ## Completed firmware
 <p>I think I finished writing firmware.</p>
 <p>Since QMK dosen't support XIAO m0 (SAMD21), I wrote simple keyboard firmware on arduino and Adafruit TinyUsb.</p>
