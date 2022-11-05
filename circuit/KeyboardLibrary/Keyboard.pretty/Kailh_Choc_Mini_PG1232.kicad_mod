@@ -41,4 +41,9 @@
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
+  (model ${KIPRJMOD}/KeyboardLibrary/Keyboard.3dshapes/Kailh_Choc_cap_1_00u.wrl
+    (offset (xyz 0 0 5.85))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )
