@@ -64,6 +64,11 @@ Uses Kailh mini choc switch, Kailh X switch, and Seeed XIAO.
 1x 6011S1M1 slide switch(needed for LED. Turn on/off LEDs)
 
 # Logs
+## Keycaps arrived
+<p>I ordered keycaps to 3d print service 2 weeks ago and I have keycaps now. Below photo is keyboard with keycaps.</p>
+<figure><!-- xiao-75-keyboard-top-view.jpg --><img src="https://cdn.hackaday.io/images/7434311668250047917.jpg" data-image="1668250048652"></figure>
+<p>It seems like I have done all what I planned.</p>
+
 ## Create keycap
 <p>My keyboard's pitch of key switch is 16mm by 16mm. This means there isn't producted keycap for my keyboard. Natural option recently is 3D print the keycaps.</p>
 <p>There is some people published keycaps for low pitch keyboards at marketplace on https://make.dmm.com/, well-known 3D print service in Japan. e.g. <a href="https://make.dmm.com/item/1280629/">YKNキーキャップセット(Chocスイッチ 15x15mmキーピッチ用)</a> or <a href="https://make.dmm.com/item/1273303/">Choc 向け 挟ピッチ16mm 薄型キーキャップ（50個）</a>.</p>
