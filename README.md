@@ -5,7 +5,12 @@
 * 1 Top-up JT8P analog stick for pointing device.
 * Seeed XIAO as controller.
 
+![keyboard photo 1](resources/xiao-75-keyboard.jpg)
+![keyboard photo 2](resources/xiao-75-keyboard-led.jpg)
+
 # Required parts
+
+## Keyboard main
 
 * 86x [Kailh PG1232 mini choc switch](https://www.aliexpress.com/item/4000277394324.html)
   * keyboard switches
@@ -27,7 +32,7 @@
   * split to 2x 7P pin heaeder
 * 1x Keyboard PCB
 
-## LED
+## Backlight LED
 * 86x [2012Metric SMD LED](https://akizukidenshi.com/catalog/g/gI-06422)
 * 86x [2012Metric 2.2k ohm SMD resistor](https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-57C4)
   * Adjust value depending on Vf of LED
