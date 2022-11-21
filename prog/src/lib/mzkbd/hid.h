@@ -18,7 +18,7 @@
 #pragma once
 
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 
 #define KEYCODES_SIZE   6
 

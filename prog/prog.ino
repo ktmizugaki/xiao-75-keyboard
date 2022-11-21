@@ -16,7 +16,6 @@
  */
 
 #include <stdbool.h>
-#include <kbdconfig.h>
 #include "src/lib/mzkbd/mzkbd.h"
 #include <Arduino.h>
 

@@ -18,7 +18,7 @@
 #pragma once
 
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 #include "mzkbd_keycode.h"
 
 #ifdef __cplusplus

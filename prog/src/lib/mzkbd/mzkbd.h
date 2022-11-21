@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 #include "keycode.h"
 #include "mzkbd_keycode.h"
 #include "hid.h"

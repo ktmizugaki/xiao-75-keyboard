@@ -17,7 +17,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 #include "mouse.h"
 #include "matrix.h"
 #include "keycode.h"

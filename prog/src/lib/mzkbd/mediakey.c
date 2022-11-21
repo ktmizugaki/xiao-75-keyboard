@@ -16,7 +16,7 @@
  */
 
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 #include "mediakey.h"
 #include "matrix.h"
 #include "keycode.h"

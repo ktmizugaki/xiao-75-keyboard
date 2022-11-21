@@ -16,7 +16,7 @@
  */
 
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 #include "matrix.h"
 #include "keymap.h"
 #include "mzkbd_keycode.h"

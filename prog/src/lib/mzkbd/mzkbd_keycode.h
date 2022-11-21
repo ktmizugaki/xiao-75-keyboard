@@ -18,7 +18,7 @@
 #pragma once
 
 #include <stdint.h>
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 
 #if !defined(KEYBOARD_SIMPLE)
 # if USE_LAYER || USE_ANALOG || USE_SIMCMD

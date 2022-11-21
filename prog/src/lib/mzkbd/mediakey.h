@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include <kbdconfig.h>
+#include "kbdconfig.h"
 
 #ifdef __cplusplus
 extern "C" {
