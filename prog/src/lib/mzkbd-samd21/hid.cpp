@@ -143,6 +143,22 @@ static const uint8_t _hidReportDescriptor[] PROGMEM = {
     0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
     0xc0,                          // END_COLLECTION
 
+#if USE_MEDIAKEY
+    //  Consumer
+    0x05, 0x0c,                    // USAGE_PAGE (Consumer)
+    0x09, 0x01,                    // USAGE (Generic Control)
+    0xa1, 0x01,                    // COLLECTION (Application)
+    0x85, RID_MEDIAKEY,            //   REPORT_ID (RID_MEDIAKEY)
+    0x19, 0x00,                    //   USAGE_MINIMUM
+    0x2a, 0xFF, 0x03,              //   USAGE_MAXIMUM
+    0x15, 0x00,                    //   LOGICAL_MINIMUM
+    0x26, 0xFF, 0x03,              //   LOGICAL_MAXIMUM
+    0x75, 0x10,                    //   REPORT_SIZE (16)
+    0x95, 0x01,                    //   REPORT_COUNT (1)
+    0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
+    0xc0,                          // END_COLLECTION
+#endif /* USE_MEDIAKEY */
+
 #if USE_MOUSE
     //  Mouse
     0x05, 0x01,                    // USAGE_PAGE (Generic Desktop)  // 54
@@ -173,7 +189,7 @@ static const uint8_t _hidReportDescriptor[] PROGMEM = {
     0x81, 0x06,                    //     INPUT (Data,Var,Rel)
     0xc0,                          //   END_COLLECTION
     0xc0,                          // END_COLLECTION
-#endif USE_MOUSE
+#endif /* USE_MOUSE */
 };
 
 static HIDSubDescriptor node(_hidReportDescriptor, sizeof(_hidReportDescriptor));
@@ -213,7 +229,7 @@ void mouse_report(uint8_t buttons,
 void mediakey_report(uint16_t mediakey)
 {
     uint8_t report[2] = {mediakey&0xff, (mediakey>>8)&0xff};
-    HID().SendReport(RID_MOUSE, &report, sizeof(report));
+    HID().SendReport(RID_MEDIAKEY, &report, sizeof(report));
 }
 #endif
 
