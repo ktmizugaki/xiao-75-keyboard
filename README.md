@@ -8,6 +8,12 @@
 ![keyboard photo 1](resources/xiao-75-keyboard.jpg)
 ![keyboard photo 2](resources/xiao-75-keyboard-led.jpg)
 
+
+Here is layout of xiao 75% keyboard. Darker key indicates keys with 1.25u keycap.  
+![layout](resources/layout.png)
+
+I don't use `Caps Lock` key, and replaced it by `Left Control` key.
+
 # Required parts
 
 ## Keyboard main
