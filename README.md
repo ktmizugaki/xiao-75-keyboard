@@ -48,3 +48,11 @@ I don't use `Caps Lock` key, and replaced it by `Left Control` key.
 * 1x [2012Metric 1uF SMD capacitor](https://akizukidenshi.com/catalog/g/gP-09174)
 * 1x [6011S1M1 slide switch](https://akizukidenshi.com/catalog/g/gP-15365)
   * Turn on/off LEDs
+
+# About firmware
+
+Source code of Arduino based firmware is available under [prog](prog)
+
+Supports only SAMD21 version of XIAO.
+
+See [prog/README.md](prog/README.md) for details.

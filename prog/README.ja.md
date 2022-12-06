@@ -37,6 +37,7 @@ SAMD21 版 XIAO にのみ対応しています。
 # Arduino IDEを使ってファームウェアをビルドする。
 
 1. [公式の手順](https://wiki.seeedstudio.com/jp/Seeeduino-XIAO/#seeeduino-xiao)に従い、Seeed XIAO の環境をセットアップします。
-2. board 一覧から Seeed XIAO を選択します。
-3. Seeed XIAO の公式のcoreは最新の TinyUSB に未対応のため、USB Stackは標準のArduinoを使用します。
-4. Seeed XIAO を接続し、 sketch を upload します。
+2. Arduino IDE で prog.ino を開きます。
+3. board 一覧から Seeed XIAO を選択します。
+4. Seeed XIAO の公式のcoreは最新の TinyUSB に未対応のため、USB Stackは標準のArduinoを使用します。
+5. Seeed XIAO を接続し、 sketch を upload します。

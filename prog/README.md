@@ -36,8 +36,9 @@ Use double-tap-reset or press `Fn+R` if XIAO is attached to xiao 75% keyboard to
 # Building firmware with Arduino IDE
 
 1. Setup Seeed SAMD development environment as per [Official guide](https://wiki.seeedstudio.com/Seeeduino-XIAO/#getting-started).
-2. Select Seeed XIAO in board menu.
-3. Since Seeed's official core doesn't support TinyUSB, select Arduino's USB Stack which is default.
-4. Connect Seeed XIAO and upload sketch.
+2. Open prog.ino from Arduino IDE.
+3. Select Seeed XIAO in board menu.
+4. Since Seeed's official core doesn't support TinyUSB, select Arduino's USB Stack which is default.
+5. Connect Seeed XIAO and upload sketch.
 
 It seems like USB-CDC can't be disabled with arduino's USB stack.
