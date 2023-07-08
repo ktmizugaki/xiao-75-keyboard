@@ -1,4 +1,5 @@
 xiao 75% keyboard は、16mm×16mmの狭ピッチ 75%キーボードです。
+このキーボードの基板を販売します。
 
 ●xiao 75% keyboardについて
 xiao 75% keyboard は、下記の特徴を持つ、75%キーボードです。
