@@ -49,20 +49,21 @@ typedef uint16_t kbdkey_t;
 #define XXXXXXX KC_NO
 #define _______ KC_TRANSPARENT
 
-#define EXKT_MASK       0xff80
-
 #define EXKT_SIMCMD     0x5c00
+#define EXKT_SIMCMD_END 0x5c1f
 
 #define EXKT_LAYER      0x5000
+#define EXKT_LAYER_END  0x51ff
 #define LAYER_MASK      (0x1f<<0)
 #define LAYER_TOGGLE    (0<<6)
 #define LAYER_MOMENTARY (1<<6)
 
 #define EXKT_ANALOG     0x2400
+#define EXKT_ANALOG_END 0x24ff
 #define ANALOG_ID_MASK  0x0f
 #define ANALOG_INVERT   (1<<6)
 
-#define IS_EXKT(key, type)  (((key)&EXKT_MASK) == type)
+#define IS_EXKT(key, type)  ({kbdkey_t k = (key); k>=type&&k<=type##_END;})
 #define IS_SIMCMD(key)      IS_EXKT((key), EXKT_SIMCMD)
 #define IS_LAYER(key)       IS_EXKT((key), EXKT_LAYER)
 #define IS_ANALOG(key)      IS_EXKT((key), EXKT_ANALOG)
