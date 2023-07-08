@@ -31,12 +31,15 @@ static layer_state_t s_layer_state;
 static void layer_press_key(kbdkey_t key)
 {
     layer_t layer = key&LAYER_MASK;
-    switch (key&(3<<6)) {
+    switch (key&LAYER_OP_MASK) {
     case LAYER_TOGGLE:
-        layer_set(layer);
+        layer_toggle(layer);
         return;
     case LAYER_MOMENTARY:
         layer_on(layer);
+        return;
+    case LAYER_GOTO:
+        layer_set(layer);
         return;
     }
 }
@@ -44,11 +47,13 @@ static void layer_press_key(kbdkey_t key)
 static void layer_release_key(kbdkey_t key)
 {
     layer_t layer = key&LAYER_MASK;
-    switch (key&(3<<6)) {
+    switch (key&LAYER_OP_MASK) {
     case LAYER_TOGGLE:
         return;
     case LAYER_MOMENTARY:
         layer_off(layer);
+        return;
+    case LAYER_GOTO:
         return;
     }
 }
@@ -107,6 +112,12 @@ void layer_on(layer_t layer)
 void layer_off(layer_t layer)
 {
     layer_state_set(s_layer_state&~TO_LAYER_STATE(layer));
+}
+
+void layer_toggle(layer_t layer)
+{
+    layer_state_t st = TO_LAYER_STATE(layer);
+    layer_state_set(s_layer_state^st);
 }
 
 int layer_is_on(layer_t layer)

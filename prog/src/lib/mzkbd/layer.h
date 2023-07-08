@@ -59,6 +59,8 @@ extern void layer_set(layer_t layer);
 extern void layer_on(layer_t layer);
 /** deactivate specified layer. */
 extern void layer_off(layer_t layer);
+/** toggle specified layer. */
+extern void layer_toggle(layer_t layer);
 /** return 1 if specified layer is active. */
 extern int layer_is_on(layer_t layer);
 
