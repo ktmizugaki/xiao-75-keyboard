@@ -99,7 +99,7 @@ if [ "$t1" ]; then
     gen_key
 fi
 
-for f in caps1514-all.stl caps1514-plain.stl; do
+for f in caps1514-all.stl caps1514-all-plain.stl; do
   if ! [ -e "$f" ]; then
     echo "gen $f"
     openscad --export-format binstl -o $f ${f/stl/scad}
