@@ -76,8 +76,8 @@ translate([8, 0, 14*2]) {
   translate([15*11, 0, 0]) cap_front(0, "' \"", 0, SZ_SYM, SP_SYM);
   translate([2+15*12, 0, 0]) cap_front(1, "Enter", 2, SZ_LNG, 1);
 }
-translate([14, 0, 14*1]) {
-  translate([-8+15*0, 0, 0]) cap_front(1, "Shift", 2, SZ_LNG, 1);
+translate([16, 0, 14*1]) {
+  translate([-10+15*0, 0, 0]) cap_front(1, "Shift", 2, SZ_LNG, 1);
   translate([15* 1, 0, 0]) cap_front(0, "Z", 0, SZ_ALP, 1);
   translate([15* 2, 0, 0]) cap_front(0, "X", 0, SZ_ALP, 1);
   translate([15* 3, 0, 0]) cap_front(0, "C", 0, SZ_ALP, 1);
@@ -90,7 +90,7 @@ translate([14, 0, 14*1]) {
   translate([15*10, 0, 0]) cap_front(0, "/ ?", 0, SZ_SYM, SP_SYM);
   translate([2+15*11, 0, 0]) cap_front(1, "Shift", 2, SZ_LNG, 1);
 }
-translate([10, 0, 14*0]) {
+translate([12, 0, 14*0]) {
   translate([-2+15*0, 0, 0]) cap_front(1, "Ctrl", 2, SZ_LNG, 1);
   translate([15* 1, 0, 0]) cap_front(0, "Fn", 0.4, SZ_FKY, 1);
   translate([15* 2, 0, 0]) cap_front(0, WINKEY, 0.4, SZ_MOD, 1);
