@@ -1,0 +1,16 @@
+Files:
+  caps1514-all.stl
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Comment:
+  Contains derivative of debian-openlogo-nd-simplified.svg
+
+Files: debian-openlogo-nd-simplified.svg
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Comment:
+  Derivative of debian-openlogo-nd.svg
+
+Files: debian-openlogo-nd.svg
+Copyright: 1999 Software in the Public Interest, Inc.
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Source: https://www.debian.org/logos/index.html
+Comment: Debian Open Use Logo
